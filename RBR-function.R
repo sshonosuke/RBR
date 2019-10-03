@@ -152,20 +152,20 @@ RBR.HS=function(Y,X,mcmc=1500,burn=500,gam=0.2){
 ##-------------------------------------------------##
 ##              Bayesian Lasso                     ##
 ##-------------------------------------------------##
-BL=function(Y,X,mc=2000,burn=500){
+BL=function(Y,X,mcmc=2000,burn=500){
   n=dim(X)[1]; p=dim(X)[2]
   
   # initial values
   Int.pos=c(); Int=1
-  Beta.pos=matrix(NA,mc,p); Beta=rep(0,p)
+  Beta.pos=matrix(NA,mcmc,p); Beta=rep(0,p)
   sig.pos=c(); sig=1
   Lam.pos=c(); Lam=1
-  U.pos=matrix(NA,mc,p);  U=rep(1,p)
+  U.pos=matrix(NA,mcmc,p);  U=rep(1,p)
   a=1; b=1    # prior for lambda^2
   cc=1   # prior for sigma^2
   
   # MCMC 
-  for(k in 1:mc){
+  for(k in 1:mcmc){
     # Int
     resid=as.vector(Y-X%*%Beta)
     Int=rnorm(1,mean(resid),sig/sqrt(n))
