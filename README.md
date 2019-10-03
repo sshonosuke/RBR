@@ -45,7 +45,7 @@ bn=500
 fit1=RBR.L(Y,X,mc=mc,burn=bn,gam=0.2)
 ```
 
-Apply the robust Bayesian method with Horseshoe prior.
+Apply the robust Bayesian method with Horseshoe prior.  
 Input and output of `RBR.HS` are the same as `RBR.L`
 
 
@@ -53,13 +53,12 @@ Input and output of `RBR.HS` are the same as `RBR.L`
 fit2=RBR.HS(Y,X,mc,bn,gam=0.2)
 ```
 
-Apply the standard Bayesian Lasso.
+Apply the standard Bayesian Lasso.  
 Input of `BL` is the same as `RBR.L` other than `gam`, and output is the same.
 
 ```{r}
 fit3=BL(Y,X,mc,bn)
 ```
-
 
 Posterior median of regression coefficients
 ```{r}
