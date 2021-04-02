@@ -2,7 +2,7 @@
 
 This package implements robust Bayesian regression with synthetic posterior, as proposed by the following papers.
 
-Hashimoto, S. and Sugasawa, S. (2019). Robust Bayesian regression with synthetic posterior. *Entropy* 22, 661. ([article](https://www.mdpi.com/1099-4300/22/6/661))
+Hashimoto, S. and Sugasawa, S. (2020). Robust Bayesian regression with synthetic posterior. *Entropy* 22, 661. ([article](https://www.mdpi.com/1099-4300/22/6/661))
 
 Functions are implemented in RBR-function.R available in the repository.
 
